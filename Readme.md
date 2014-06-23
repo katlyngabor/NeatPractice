@@ -1,3 +1,1 @@
-## Yo, I'm a Readme
-
-You should probably update me so people looking at your code have an idea what it is being used for :)
+This project, assigned by the Iron Yard Academy, serves a practice using Bourbon's Neat. We had to recreate some basic examples of how Neat works.
