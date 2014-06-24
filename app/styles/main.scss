@@ -1,26 +1,70 @@
-
 @import 'bourbon/bourbon';
-@import 'neat/neat';
+@import '../../neat/neat';
 
 
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+$height:100px;
+
+@mixin fun{
+  height:100px;
+  font-size:8px;
+  text-align:center;
+  background-color:#c2a9c2;
+  border:2px solid white;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+@mixin spacing{
+  padding:15px 0;
+}
+
+header{
+  @include spacing;
+  @include outer-container;
+  .figuring-it-out {@include span-columns(6)};
+  .still-figuring{@include span-columns(6)};
+}
+
+
+
+
+.figuring-it-out{
+  @include fun;
+
+}
+
+.still-figuring{
+  @include fun;
+}
+
+section{
+  @include outer-container;
+  .Row-oneA{@include span-columns(1)};
+  .Row-oneB{@include span-columns(11);
+            @include omega()};
+  .Row-twoA{@include span-columns(4)};
+  .Row-twoB{@include span-columns(8);
+            @include omega()};
   }
+  
+
+
+.Row-oneA{
+  @include fun;
 }
+
+.Row-oneB{
+  @include fun;
+
+}
+
+.Row-twoA{
+  @include fun;
+
+}
+
+.Row-twoB{
+  @include fun;
+}
+
+
+
+
