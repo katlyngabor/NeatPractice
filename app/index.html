@@ -34,18 +34,15 @@
         <div class="Row-twoB">Hey! I'm row two, too!</div>
     </section>  
 
-    <div class="nesting-container">Nesting is fun!>
+    <div class="nesting-container">
         <div class="left-nest">I'm just nesting over here.</div>
-        <div class="right-nest">And I'm nesting over here.>
-            <div class="left-nest-two">And I'm nesting in here!></div>
-            <div class="right-nest-two">Me too!></div>
+        <div class="right-nest">
+            <div class="left-nest-two">And I'm nesting in here!</div>
+            <div class="right-nest-two">Me too!</div>
         </div>
     </div>
 
-@include outer-container;
-@include span-columns(4);
-@include span-columns(8);
-@include span-columns(4 of 8); @include span-columns(4 of 8);
+
 
 
     <!-- build:js scripts/vendor.js -->

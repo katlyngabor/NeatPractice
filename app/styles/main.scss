@@ -2,8 +2,6 @@
 @import '../../neat/neat';
 
 
-$height:100px;
-
 @mixin fun{
   height:100px;
   font-size:8px;
@@ -13,7 +11,7 @@ $height:100px;
 }
 
 @mixin spacing{
-  padding:15px 0;
+  padding:30px 0;
 }
 
 header{
@@ -24,16 +22,11 @@ header{
 }
 
 
-
-
-.figuring-it-out{
+.figuring-it-out, .still-figuring{
   @include fun;
 
 }
 
-.still-figuring{
-  @include fun;
-}
 
 section{
   @include outer-container;
@@ -49,4 +42,18 @@ section{
 .Row-oneA, .Row-oneB, .Row-twoA, .Row-twoB{
   @include fun;
 }
+
+.nesting-container{
+  @include outer-container;
+  @include spacing;
+  .left-nest{@include span-columns(4)};
+  .right-nest{@include span-columns(8)};
+  .left-nest-two{@include span-columns(4 of 8)};
+  .right-nest-two{@include span-columns(4 of 8)};
+}
+
+.left-nest, .left-nest-two, .right-nest-two {
+  @include fun;
+}
+
 
