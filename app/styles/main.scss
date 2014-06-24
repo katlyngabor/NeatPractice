@@ -46,25 +46,7 @@ section{
   }
   
 
-
-.Row-oneA{
+.Row-oneA, .Row-oneB, .Row-twoA, .Row-twoB{
   @include fun;
 }
-
-.Row-oneB{
-  @include fun;
-
-}
-
-.Row-twoA{
-  @include fun;
-
-}
-
-.Row-twoB{
-  @include fun;
-}
-
-
-
 

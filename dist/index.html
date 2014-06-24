@@ -14,8 +14,31 @@
     <script src="scripts/vendor/modernizr.js"></script>
   </head>
   <body>
+    <header>
+        <span class="figuring-it-out">Figuring it out!</span>
+        <span class="still-figuring">Still Figuring!</span>
+    </header>
 
-    <div class= 
+    <section>
+        <div class="Row-oneA">Now we are figuring out multiple rows!</div>
+        <div class="Row-oneB">Am I doing this right?</div>
+        <div class="Row-twoA">This is row two!</div>
+        <div class="Row-twoB">Hey! I'm row two, too!</div>
+    </section>  
+
+    <div class="nesting-container">Nesting is fun!>
+        <div class="left-nest">I'm just nesting over here.</div>
+        <div class="right-nest">And I'm nesting over here.>
+            <div class="left-nest-two">And I'm nesting in here!></div>
+            <div class="right-nest-two">Me too!></div>
+        </div>
+    </div>
+
+@include outer-container;
+@include span-columns(4);
+@include span-columns(8);
+@include span-columns(4 of 8); @include span-columns(4 of 8);
+
 
     <script src="scripts/vendor.js"></script>
 
